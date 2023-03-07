@@ -76,8 +76,13 @@ module GoogleChart
     def to_url(extras={})
       prepare_params
       params.merge!(extras)
+      # query_string = params.map { |k,v| "#{k}=#{URI.escape(v.to_s).gsub(/%20/,'+').gsub(/%7C/,'|')}" }.join('&')
+      #query_string = URI.encode_www_form(params.transform_values { |v| URI::DEFAULT_PARSER.escape(v.to_s, /[^a-zA-Z0-9_\-.~]/) }).gsub(/%7C/,'|')
+      # query_string = params.map { |k,v| "#{k}=#{(v.to_s).gsub(/%20/,'+').gsub(/%7C/,'|')}" }.join('&')
       query_string = URI.encode_www_form(params.transform_values { |v| v.to_s.gsub(/%7C/,'|') })
+      puts BASE_URL + query_string
       BASE_URL + query_string
+
     end
 
     # Generates a fully encoded URL string that can be used to retrieve the graph image in PNG format.

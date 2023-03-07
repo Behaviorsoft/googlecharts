@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/77/trunk/lib
+END
+example.rb
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/46/trunk/lib/example.rb
+END
+google_chart.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/62/trunk/lib/google_chart.rb
+END
+test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/74/trunk/lib/test.rb
+END
