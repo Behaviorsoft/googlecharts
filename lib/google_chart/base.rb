@@ -2,7 +2,7 @@ require 'uri'
 
 module GoogleChart
   class Base
-    BASE_URL = "http://chart.apis.google.com/chart?"
+    BASE_URL = "http://quickchart.io/chart?"
     
     SIMPLE_ENCODING = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.split('');
     COMPLEX_ENCODING_ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-.'.split('');
@@ -75,6 +75,7 @@ module GoogleChart
     #      puts lc.to_url({:chm => "000000,0,0.1,0.11"}) # Single black line as a horizontal marker        
     def to_url(extras={})
       prepare_params
+      params[:key] = 'q-jvkfn4o32kq24vkk3122gxv7d5fq7bs0'
       params.merge!(extras)
       query_string = URI.encode_www_form(params.transform_values { |v| v.to_s.gsub(/%7C/,'|') })
       BASE_URL + query_string
