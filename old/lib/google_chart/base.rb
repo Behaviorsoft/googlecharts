@@ -75,6 +75,7 @@ module GoogleChart
     #      puts lc.to_url({:chm => "000000,0,0.1,0.11"}) # Single black line as a horizontal marker        
     def to_url(extras={})
       prepare_params
+      params[:key] = 'q-jvkfn4o32kq24vkk3122gxv7d5fq7bs0'
       params.merge!(extras)
       # query_string = params.map { |k,v| "#{k}=#{URI.escape(v.to_s).gsub(/%20/,'+').gsub(/%7C/,'|')}" }.join('&')
       #query_string = URI.encode_www_form(params.transform_values { |v| URI::DEFAULT_PARSER.escape(v.to_s, /[^a-zA-Z0-9_\-.~]/) }).gsub(/%7C/,'|')
