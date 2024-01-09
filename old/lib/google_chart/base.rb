@@ -2,7 +2,7 @@ require 'uri'
 
 module GoogleChart
   class Base
-    BASE_URL = "http://chart.apis.google.com/chart?"
+    BASE_URL = "http://quickchart.io/chart?"
     
     SIMPLE_ENCODING = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.split('');
     COMPLEX_ENCODING_ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-.'.split('');
